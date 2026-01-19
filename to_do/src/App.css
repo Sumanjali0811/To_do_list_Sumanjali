@@ -1,0 +1,177 @@
+/* ===== Base Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #2e2b26,
+    #1f1d1a
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6e3dc;
+}
+
+/* ===== App Container ===== */
+.app-container {
+  width: 440px;
+  background: linear-gradient(
+    180deg,
+    #2b2823,
+    #23211e
+  );
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Title ===== */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 22px;
+  color: #f3efe6;
+}
+
+/* ===== Input Section ===== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #3a3630;
+  background-color: #1e1c19;
+  color: #f3efe6;
+  font-size: 0.95rem;
+}
+
+.input-section input::placeholder {
+  color: #9b968c;
+}
+
+.input-section input:focus {
+  outline: none;
+  border-color: #c2a76d;
+  box-shadow: 0 0 0 3px rgba(194, 167, 109, 0.25);
+}
+
+/* ===== Add Button ===== */
+.input-section button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #c2a76d, #a48b55);
+  color: #1e1c19;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-section button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(194, 167, 109, 0.35);
+}
+
+/* ===== Task List ===== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== Task Item ===== */
+.task {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    #2f2c26,
+    #26231f
+  );
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.task:hover {
+  background: #35312b;
+  transform: translateX(3px);
+}
+
+/* ===== Checkbox ===== */
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #c2a76d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox.checked {
+  background: #c2a76d;
+  box-shadow: 0 0 8px rgba(194, 167, 109, 0.5);
+}
+
+/* ===== Task Text ===== */
+.task span {
+  font-size: 0.95rem;
+  color: #e6e3dc;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #9a958b;
+}
+
+/* ===== Summary ===== */
+.summary {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cfcabf;
+}
+
+/* ===== All Done Message ===== */
+.all-done {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #c2a76d, #a48b55);
+  color: #1e1c19;
+  text-align: center;
+  font-weight: 700;
+  animation: popIn 0.3s ease;
+}
+
+/* ===== Animations ===== */
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
